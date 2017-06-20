@@ -30,24 +30,28 @@ router.post('/login', function (req, res) {
     // M02 = Administration
     // M03 = Parameter
     // M04 = Universal Loan
-    // M05 = Library Depoist
-    // M06 = Collateral Document
+    // M05 = Library Transaction
     if (un === 'cbs01' && pw === 'P@ssw0rd') {
         payload = {
             'un': un,
             'rl': 'Officer',
+            'bc': '0208',
             'mn': [
                 {'menuCode': 'M00', 'label': 'home', 'url': ''},
                 {'menuCode': 'M04', 'label': 'universalLoan', 'url': ''},
                 {'menuCode': "M018", 'label': 'list', 'url': '/home/universalLoan', 'parent': 'M04'},
-                {'menuCode': "M019", 'label': 'maintenance', 'url': '/home/universalLoan/maintenance', 'parent': 'M04'}
+                {'menuCode': "M020", 'label': 'maintenance', 'url': '/home/universalLoan/maintenance', 'parent': 'M04'}
             ],
-            'sv': []
+            'sv': [
+                {'sc': 'GET_LIST_USAGE_TYPE', 'ph': 'getListUsageType'},
+                {'sc': 'GET_LIST_USAGE_TYPE_PAGING', 'ph': 'getListUsageTypePaging'}
+            ]
         };
     } else if (un === 'cbs02' && pw === 'P@ssw0rd') {
         payload = {
             'un': un,
             'rl': 'Supervisor',
+            'bc': '0208',
             'mn': [
                 {'menuCode': 'M00', 'label': 'home', 'url': ''},
                 {'menuCode': 'M01', 'label': 'dashboard', 'url': ''},
@@ -87,8 +91,7 @@ router.post('/login', function (req, res) {
                 {'menuCode': "M017", 'label': 'collateralType', 'url': '/home/collateralType', 'parent': 'M03'},
 
                 {'menuCode': 'M04', 'label': 'universalLoan', 'url': ''},
-                {'menuCode': "M018", 'label': 'list', 'url': '/home/universalLoan', 'parent': 'M04'},
-                {'menuCode': "M019", 'label': 'maintenance', 'url': '/home/universalLoan/maintenance', 'parent': 'M04'}
+                {'menuCode': "M019", 'label': 'approval', 'url': '/home/universalLoan/approval', 'parent': 'M04'}
             ],
             'sv': [
                 {'sc': 'ADD_BRANCH', 'ph': 'addBranch'},
@@ -171,14 +174,32 @@ router.post('/login', function (req, res) {
         payload = {
             'un': un,
             'rl': 'Library Officer',
+            'bc': '0208',
             'mn': [
                 {'menuCode': 'M00', 'label': 'home', 'url': ''},
-                {'menuCode': 'M05', 'label': 'libraryDeposit', 'url': ''},
-                {'menuCode': "M020", 'label': 'list', 'url': '/home/libraryDeposit', 'parent': 'M05'},
+                {'menuCode': 'M05', 'label': 'libraryTransaction', 'url': ''},
+                {'menuCode': "M021", 'label': 'deposit', 'url': '/home/libraryDeposit', 'parent': 'M05'},
                 {
-                    'menuCode': "M021",
-                    'label': 'maintenance',
+                    'menuCode': "M022",
+                    'label': 'depositMaintenance',
                     'url': '/home/libraryDeposit/maintenance',
+                    'parent': 'M05'
+                },
+                {
+                    'menuCode': "M023",
+                    'label': 'documentBorrowed',
+                    'url': '/home/documentBorrow',
+                    'parent': 'M05'
+                },
+                {
+                    'menuCode': "M024",
+                    'label': 'documentReturned',
+                    'url': '/home/documentReturn',
+                    'parent': 'M05'
+                },{
+                    'menuCode': "M025",
+                    'label': 'documentReleased',
+                    'url': '/home/documentRelease',
                     'parent': 'M05'
                 },
             ]
@@ -187,13 +208,29 @@ router.post('/login', function (req, res) {
         payload = {
             'un': un,
             'rl': 'Library Supervisor',
+            'bc': '0208',
             'mn': [
                 {'menuCode': 'M00', 'label': 'home', 'url': ''},
                 {'menuCode': 'M01', 'label': 'dashboard', 'url': ''},
                 {'menuCode': 'M00', 'label': 'home', 'url': ''},
-                {'menuCode': 'M05', 'label': 'libraryDeposit', 'url': ''},
-                {'menuCode': "M020", 'label': 'list', 'url': '/home/libraryDeposit', 'parent': 'M05'},
-                {'menuCode': "M021", 'label': 'maintenance', 'url': '/home/libraryDeposit/maintenance', 'parent': 'M05'}
+                {'menuCode': 'M05', 'label': 'libraryTransaction', 'url': ''},
+                {
+                    'menuCode': "M026",
+                    'label': 'documentBorrowedApproval',
+                    'url': '/home/documentBorrow/approval',
+                    'parent': 'M05'
+                },
+                {
+                    'menuCode': "M027",
+                    'label': 'documentReturnedApproval',
+                    'url': '/home/documentReturn/approval',
+                    'parent': 'M05'
+                },{
+                    'menuCode': "M028",
+                    'label': 'documentReleasedApproval',
+                    'url': '/home/documentRelease/approval',
+                    'parent': 'M05'
+                },
             ]
         };
     } else {
