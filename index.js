@@ -45,18 +45,18 @@ router.post('/login', function (req, res) {
                 {
                     'menuCode': "M023",
                     'label': 'documentBorrowedRequest',
-                    'url': '/home/documentBorrowRequest',
+                    'url': '/home/documentBorrow/request',
                     'parent': 'M05'
                 },
                 {
                     'menuCode': "M024",
                     'label': 'documentReturnedRequest',
-                    'url': '/home/documentReturnRequest',
+                    'url': '/home/documentReturn/request',
                     'parent': 'M05'
                 }, {
                     'menuCode': "M025",
                     'label': 'documentReleasedRequest',
-                    'url': '/home/documentReleaseRequest',
+                    'url': '/home/documentRelease/request',
                     'parent': 'M05'
                 },
             ],
@@ -109,23 +109,29 @@ router.post('/login', function (req, res) {
                 {'menuCode': "M017", 'label': 'collateralType', 'url': '/home/collateralType', 'parent': 'M03'},
 
                 {'menuCode': 'M04', 'label': 'universalLoan', 'url': ''},
-                {'menuCode': "M019", 'label': 'approval', 'url': '/home/universalLoan/approval', 'parent': 'M04'},
+                {'menuCode': "A001", 'label': 'approval', 'url': '/home/universalLoan/approval', 'parent': 'M04'},
+                {
+                    'menuCode': "A002",
+                    'label': 'maintenanceApproval',
+                    'url': '/home/universalLoan/maintenanceApproval',
+                    'parent': 'M04'
+                },
                 {'menuCode': 'M05', 'label': 'libraryTransaction', 'url': ''},
                 {
-                    'menuCode': "M026",
+                    'menuCode': "A004",
                     'label': 'documentBorrowedRequestApproval',
-                    'url': '/home/documentBorrowRequest/approval',
+                    'url': '/home/documentBorrow/requestApproval',
                     'parent': 'M05'
                 },
                 {
-                    'menuCode': "M027",
+                    'menuCode': "A005",
                     'label': 'documentReturnedRequestApproval',
-                    'url': '/home/documentReturnRequest/approval',
+                    'url': '/home/documentReturn/requestApproval',
                     'parent': 'M05'
                 }, {
-                    'menuCode': "M028",
+                    'menuCode': "A006",
                     'label': 'documentReleasedRequestApproval',
-                    'url': '/home/documentReleaseRequest/approval',
+                    'url': '/home/documentRelease/requestApproval',
                     'parent': 'M05'
                 },
             ],
@@ -223,18 +229,18 @@ router.post('/login', function (req, res) {
                 }, {
                     'menuCode': "M029",
                     'label': 'documentBorrowedProcess',
-                    'url': '/home/documentBorrowProcess',
+                    'url': '/home/documentBorrow/process',
                     'parent': 'M05'
                 },
                 {
                     'menuCode': "M030",
                     'label': 'documentReturnedProcess',
-                    'url': '/home/documentReturnProcess',
+                    'url': '/home/documentReturn/process',
                     'parent': 'M05'
                 }, {
                     'menuCode': "M031",
                     'label': 'documentReleasedProcess',
-                    'url': '/home/documentReleaseProcess',
+                    'url': '/home/documentRelease/process',
                     'parent': 'M05'
                 },
             ]
@@ -250,20 +256,20 @@ router.post('/login', function (req, res) {
                 {'menuCode': 'M00', 'label': 'home', 'url': ''},
                 {'menuCode': 'M05', 'label': 'libraryTransaction', 'url': ''},
                 {
-                    'menuCode': "M032",
+                    'menuCode': "A007",
                     'label': 'documentBorrowedProcessApproval',
-                    'url': '/home/documentBorrowProcess/approval',
+                    'url': '/home/documentBorrow/processApproval',
                     'parent': 'M05'
                 },
                 {
-                    'menuCode': "M033",
+                    'menuCode': "A008",
                     'label': 'documentReturnedProcessApproval',
-                    'url': '/home/documentReturnProcess/approval',
+                    'url': '/home/documentReturn/processApproval',
                     'parent': 'M05'
                 }, {
-                    'menuCode': "M034",
+                    'menuCode': "A009",
                     'label': 'documentReleasedProcessApproval',
-                    'url': '/home/documentReleaseProcess/approval',
+                    'url': '/home/documentRelease/processApproval',
                     'parent': 'M05'
                 },
             ]
