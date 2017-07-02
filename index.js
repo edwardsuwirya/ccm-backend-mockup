@@ -273,7 +273,7 @@ router.post('/login', function (req, res) {
                     'menuCode': "A004",
                     'label': 'libraryDepositMaintenanceApproval',
                     'url': '/home/libraryDepositMaintenance/approval',
-                    'parent': 'M04'
+                    'parent': 'M05'
                 },
                 {
                     'menuCode': "A008",
