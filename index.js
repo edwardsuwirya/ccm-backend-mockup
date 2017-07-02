@@ -118,18 +118,18 @@ router.post('/login', function (req, res) {
                 },
                 {'menuCode': 'M05', 'label': 'libraryTransaction', 'url': ''},
                 {
-                    'menuCode': "A004",
+                    'menuCode': "A005",
                     'label': 'documentBorrowedRequestApproval',
                     'url': '/home/documentBorrow/request/approval',
                     'parent': 'M05'
                 },
                 {
-                    'menuCode': "A005",
+                    'menuCode': "A006",
                     'label': 'documentReturnedRequestApproval',
                     'url': '/home/documentReturn/request/approval',
                     'parent': 'M05'
                 }, {
-                    'menuCode': "A006",
+                    'menuCode': "A007",
                     'label': 'documentReleasedRequestApproval',
                     'url': '/home/documentRelease/request/approval',
                     'parent': 'M05'
@@ -220,11 +220,11 @@ router.post('/login', function (req, res) {
             'mn': [
                 {'menuCode': 'M00', 'label': 'home', 'url': ''},
                 {'menuCode': 'M05', 'label': 'libraryTransaction', 'url': ''},
-                {'menuCode': "M021", 'label': 'deposit', 'url': '/home/libraryDeposit', 'parent': 'M05'},
+                {'menuCode': "M020", 'label': 'deposit', 'url': '/home/libraryDeposit', 'parent': 'M05'},
                 {
-                    'menuCode': "M022",
+                    'menuCode': "M021",
                     'label': 'depositMaintenance',
-                    'url': '/home/libraryDeposit/maintenance',
+                    'url': '/home/libraryDepositMaintenance',
                     'parent': 'M05'
                 }, {
                     'menuCode': "M029",
@@ -255,19 +255,26 @@ router.post('/login', function (req, res) {
                 {'menuCode': 'M01', 'label': 'dashboard', 'url': ''},
                 {'menuCode': 'M00', 'label': 'home', 'url': ''},
                 {'menuCode': 'M05', 'label': 'libraryTransaction', 'url': ''},
+                {'menuCode': "A003", 'label': 'libraryDepositApproval', 'url': '/home/libraryDeposit/approval', 'parent': 'M05'},
                 {
-                    'menuCode': "A007",
+                    'menuCode': "A004",
+                    'label': 'libraryDepositMaintenanceApproval',
+                    'url': '/home/libraryDepositMaintenance/approval',
+                    'parent': 'M04'
+                },
+                {
+                    'menuCode': "A008",
                     'label': 'documentBorrowedProcessApproval',
                     'url': '/home/documentBorrow/process/approval',
                     'parent': 'M05'
                 },
                 {
-                    'menuCode': "A008",
+                    'menuCode': "A009",
                     'label': 'documentReturnedProcessApproval',
                     'url': '/home/documentReturn/process/approval',
                     'parent': 'M05'
                 }, {
-                    'menuCode': "A009",
+                    'menuCode': "A010",
                     'label': 'documentReleasedProcessApproval',
                     'url': '/home/documentRelease/process/approval',
                     'parent': 'M05'
