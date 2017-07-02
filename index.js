@@ -36,6 +36,8 @@ router.post('/login', function (req, res) {
             'un': un,
             'rl': 'Officer',
             'bc': '0208',
+            'ap': 'Collateral Bankwide System',
+            'vr': '1.0.0',
             'mn': [
                 {'menuCode': 'M00', 'label': 'home', 'url': ''},
                 {'menuCode': 'M04', 'label': 'universalLoan', 'url': ''},
@@ -70,6 +72,8 @@ router.post('/login', function (req, res) {
             'un': un,
             'rl': 'Supervisor',
             'bc': '0208',
+            'ap': 'Collateral Bankwide System',
+            'vr': '1.0.0',
             'mn': [
                 {'menuCode': 'M00', 'label': 'home', 'url': ''},
                 {'menuCode': 'M01', 'label': 'dashboard', 'url': ''},
@@ -217,6 +221,8 @@ router.post('/login', function (req, res) {
             'un': un,
             'rl': 'Library Officer',
             'bc': '0208',
+            'ap': 'Collateral Bankwide System',
+            'vr': '1.0.0',
             'mn': [
                 {'menuCode': 'M00', 'label': 'home', 'url': ''},
                 {'menuCode': 'M05', 'label': 'libraryTransaction', 'url': ''},
@@ -250,12 +256,19 @@ router.post('/login', function (req, res) {
             'un': un,
             'rl': 'Library Supervisor',
             'bc': '0208',
+            'ap': 'Collateral Bankwide System',
+            'vr': '1.0.0',
             'mn': [
                 {'menuCode': 'M00', 'label': 'home', 'url': ''},
                 {'menuCode': 'M01', 'label': 'dashboard', 'url': ''},
                 {'menuCode': 'M00', 'label': 'home', 'url': ''},
                 {'menuCode': 'M05', 'label': 'libraryTransaction', 'url': ''},
-                {'menuCode': "A003", 'label': 'libraryDepositApproval', 'url': '/home/libraryDeposit/approval', 'parent': 'M05'},
+                {
+                    'menuCode': "A003",
+                    'label': 'libraryDepositApproval',
+                    'url': '/home/libraryDeposit/approval',
+                    'parent': 'M05'
+                },
                 {
                     'menuCode': "A004",
                     'label': 'libraryDepositMaintenanceApproval',
