@@ -45,18 +45,18 @@ router.post('/login', function (req, res) {
                 {'menuCode': "M019", 'label': 'maintenance', 'url': '/home/universalLoanMaintenance', 'parent': 'M04'},
                 {'menuCode': 'M05', 'label': 'libraryTransaction', 'url': ''},
                 {
-                    'menuCode': "M023",
+                    'menuCode': "M022",
                     'label': 'documentBorrowedRequest',
                     'url': '/home/documentBorrow/request',
                     'parent': 'M05'
                 },
                 {
-                    'menuCode': "M024",
+                    'menuCode': "M023",
                     'label': 'documentReturnedRequest',
                     'url': '/home/documentReturn/request',
                     'parent': 'M05'
                 }, {
-                    'menuCode': "M025",
+                    'menuCode': "M024",
                     'label': 'documentReleasedRequest',
                     'url': '/home/documentRelease/request',
                     'parent': 'M05'
@@ -233,18 +233,18 @@ router.post('/login', function (req, res) {
                     'url': '/home/libraryDepositMaintenance',
                     'parent': 'M05'
                 }, {
-                    'menuCode': "M029",
+                    'menuCode': "M025",
                     'label': 'documentBorrowedProcess',
                     'url': '/home/documentBorrow/process',
                     'parent': 'M05'
                 },
                 {
-                    'menuCode': "M030",
+                    'menuCode': "M026",
                     'label': 'documentReturnedProcess',
                     'url': '/home/documentReturn/process',
                     'parent': 'M05'
                 }, {
-                    'menuCode': "M031",
+                    'menuCode': "M027",
                     'label': 'documentReleasedProcess',
                     'url': '/home/documentRelease/process',
                     'parent': 'M05'
