@@ -60,6 +60,16 @@ router.post('/login', function (req, res) {
                     'label': 'documentReleasedRequest',
                     'url': '/home/documentRelease/request',
                     'parent': 'M05'
+                },{
+                    'menuCode': "M028",
+                    'label': 'documentBorrowedAccepted',
+                    'url': '/home/documentBorrow/accepted',
+                    'parent': 'M05'
+                },{
+                    'menuCode': "M029",
+                    'label': 'documentReturnedAccepted',
+                    'url': '/home/documentReturn/accepted',
+                    'parent': 'M05'
                 },
             ],
             'sv': [
