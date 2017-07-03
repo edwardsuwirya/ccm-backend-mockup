@@ -62,13 +62,13 @@ router.post('/login', function (req, res) {
                     'parent': 'M05'
                 },{
                     'menuCode': "M028",
-                    'label': 'documentBorrowedAccepted',
-                    'url': '/home/documentBorrow/accepted',
+                    'label': 'documentBorrowedStatus',
+                    'url': '/home/documentBorrow/status',
                     'parent': 'M05'
                 },{
                     'menuCode': "M029",
-                    'label': 'documentReturnedAccepted',
-                    'url': '/home/documentReturn/accepted',
+                    'label': 'documentReturnedStatus',
+                    'url': '/home/documentReturn/status',
                     'parent': 'M05'
                 },
             ],
