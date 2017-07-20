@@ -155,28 +155,28 @@ router.post('/login', function (req, res) {
                 {'sc': 'GET_LIST_BRANCH_PAGING', 'ph': 'getListBranchPaging'},
                 {'sc': 'UPDATE_BRANCH', 'ph': 'updateBranch'},
 
-                {'sc': 'GET_LIST_BANK_RELATION', 'ph': 'getListBankRelation'},
-                {'sc': 'ADD_BANK_RELATION', 'ph': 'addBankRelation'},
-                {'sc': 'UPDATE_BANK_RELATION', 'ph': 'updateBankRelation'},
-                {'sc': 'GET_LIST_BANK_RELATION_PAGING', 'ph': 'getListBankRelationPaging'},
+                {'sc': 'GET_LIST_BANK_RELATION', 'ph': 'bankRelation/getListBankRelation'},
+                {'sc': 'ADD_BANK_RELATION', 'ph': 'bankRelation/addBankRelation'},
+                {'sc': 'UPDATE_BANK_RELATION', 'ph': 'bankRelation/updateBankRelation'},
+                {'sc': 'GET_LIST_BANK_RELATION_PAGING', 'ph': 'bankRelation/getListBankRelationPaging'},
 
-                {'sc': 'GET_LIST_COLLATERAL_CHARACTERISTIC', 'ph': 'getListBankRelation'},
-                {'sc': 'ADD_COLLATERAL_CHARACTERISTIC', 'ph': 'addBankRelation'},
-                {'sc': 'UPDATE_COLLATERAL_CHARACTERISTIC', 'ph': 'updateBankRelation'},
-                {'sc': 'GET_LIST_COLLATERAL_CHARACTERISTIC_PAGING', 'ph': 'getListBankRelationPaging'},
+                {'sc': 'GET_LIST_COLLATERAL_CHARACTERISTIC', 'ph': 'collateralCharacteristic/getListCollateralCharacteristic'},
+                {'sc': 'ADD_COLLATERAL_CHARACTERISTIC', 'ph': 'collateralCharacteristic/addCollateralCharacteristic'},
+                {'sc': 'UPDATE_COLLATERAL_CHARACTERISTIC', 'ph': 'collateralCharacteristic/updateCollateralCharacteristic'},
+                {'sc': 'GET_LIST_COLLATERAL_CHARACTERISTIC_PAGING', 'ph': 'collateralCharacteristic/getListCollateralCharacteristicPaging'},
 
-                {'sc': 'GET_LIST_COLLATERAL_ISSUER', 'ph': 'getListBankRelation'},
-                {'sc': 'ADD_COLLATERAL_ISSUER', 'ph': 'addBankRelation'},
-                {'sc': 'UPDATE_COLLATERAL_ISSUER', 'ph': 'updateBankRelation'},
-                {'sc': 'GET_LIST_COLLATERAL_ISSUER_PAGING', 'ph': 'getListBankRelationPaging'},
+                {'sc': 'GET_LIST_COLLATERAL_PUBLISHER', 'ph': 'getListPublisher'},
+                {'sc': 'ADD_COLLATERAL_PUBLISHER', 'ph': 'addPublisher'},
+                {'sc': 'UPDATE_COLLATERAL_PUBLISHER', 'ph': 'updatePublisher'},
+                {'sc': 'GET_LIST_COLLATERAL_PUBLISHER_PAGING', 'ph': 'getListPublisherPaging'},
 
-                {'sc': 'GET_LIST_COLLATERAL_TYPE', 'ph': 'getListBankRelation'},
-                {'sc': 'ADD_COLLATERAL_TYPE', 'ph': 'addBankRelation'},
-                {'sc': 'UPDATE_COLLATERAL_TYPE', 'ph': 'updateBankRelation'},
-                {'sc': 'GET_LIST_COLLATERAL_TYPE_PAGING', 'ph': 'getListBankRelationPaging'},
+                {'sc': 'GET_LIST_COLLATERAL_TYPE', 'ph': 'getListCollateralType'},
+                {'sc': 'ADD_COLLATERAL_TYPE', 'ph': 'addCollateralType'},
+                {'sc': 'UPDATE_COLLATERAL_TYPE', 'ph': 'updateCollateralType'},
+                {'sc': 'GET_LIST_COLLATERAL_TYPE_PAGING', 'ph': 'getListCollateralTypePaging'},
 
                 {'sc': 'GET_LIST_CREDIT_CHARACTERISTIC', 'ph': 'getListCreditCharacteristic'},
-                {'sc': 'ADD_CREDIT_CHARACTERISTIC', 'ph': 'addCreditCharateristic'},
+                {'sc': 'ADD_CREDIT_CHARACTERISTIC', 'ph': 'addCreditCharacteristic'},
                 {'sc': 'UPDATE_CREDIT_CHARACTERISTIC', 'ph': 'updateCreditCharacteristic'},
                 {'sc': 'GET_LIST_CREDIT_CHARACTERISTIC_PAGING', 'ph': 'getListCreditCharacteristicPaging'},
 
@@ -190,30 +190,30 @@ router.post('/login', function (req, res) {
                 {'sc': 'UPDATE_CREDIT_TYPE', 'ph': 'updateCreditType'},
                 {'sc': 'GET_LIST_CREDIT_TYPE_PAGING', 'ph': 'getListCreditTypePaging'},
 
-                {'sc': 'GET_LIST_DEBTOR_CATEGORY', 'ph': 'getListDebtorCategory'},
-                {'sc': 'ADD_DEBTOR_CATEGORY', 'ph': 'addDebtorCategory'},
-                {'sc': 'UPDATE_DEBTOR_CATEGORY', 'ph': 'updateDebtorCategory'},
-                {'sc': 'GET_LIST_DEBTOR_CATEGORY_PAGING', 'ph': 'getListDebtorCategoryPaging'},
+                {'sc': 'GET_LIST_DEBTOR_CATEGORY', 'ph': 'debtorCategory/getListDebtorCategory'},
+                {'sc': 'ADD_DEBTOR_CATEGORY', 'ph': 'debtorCategory/addDebtorCategory'},
+                {'sc': 'UPDATE_DEBTOR_CATEGORY', 'ph': 'debtorCategory/updateDebtorCategory'},
+                {'sc': 'GET_LIST_DEBTOR_CATEGORY_PAGING', 'ph': 'debtorCategory/getListDebtorCategoryPaging'},
 
                 {'sc': 'GET_LIST_DEBTOR_STATUS', 'ph': 'getListDebtorStatus'},
                 {'sc': 'ADD_DEBTOR_STATUS', 'ph': 'addDebtorStatus'},
                 {'sc': 'UPDATE_DEBTOR_STATUS', 'ph': 'updateDebtorStatus'},
                 {'sc': 'GET_LIST_DEBTOR_STATUS_PAGING', 'ph': 'getListDebtorStatusPaging'},
 
-                {'sc': 'GET_LIST_INTEREST_RATE_TYPE', 'ph': 'getListInterestRateType'},
-                {'sc': 'ADD_INTEREST_TYPE', 'ph': 'addInterestRateType'},
-                {'sc': 'UPDATE_INTEREST_RATE_TYPE', 'ph': 'updateInterestRateType'},
-                {'sc': 'GET_LIST_INTEREST_RATE_TYPE_PAGING', 'ph': 'getListInterestRateTypePaging'},
+                {'sc': 'GET_LIST_INTEREST_RATE_TYPE', 'ph': 'interestRate/getListInterestRateType'},
+                {'sc': 'ADD_INTEREST_TYPE', 'ph': 'interestRate/addInterestRateType'},
+                {'sc': 'UPDATE_INTEREST_RATE_TYPE', 'ph': 'interestRate/updateInterestRateType'},
+                {'sc': 'GET_LIST_INTEREST_RATE_TYPE_PAGING', 'ph': 'interestRate/getListInterestRateTypePaging'},
 
-                {'sc': 'GET_LIST_MEASUREMENT_CATEGORY', 'ph': 'getListMeasurementCategory'},
-                {'sc': 'ADD_MEASUREMENT_CATEGORY', 'ph': 'addMeasurementCategory'},
-                {'sc': 'UPDATE_MEASUREMENT_CATEGORY', 'ph': 'updateMeasurementCategory'},
-                {'sc': 'GET_LIST_MEASUREMENT_CATEGORY_PAGING', 'ph': 'getListMeasurementCategoryPaging'},
+                {'sc': 'GET_LIST_MEASUREMENT', 'ph': 'getListMeasurement'},
+                {'sc': 'ADD_MEASUREMENT', 'ph': 'addMeasurement'},
+                {'sc': 'UPDATE_MEASUREMENT', 'ph': 'updateMeasurement'},
+                {'sc': 'GET_LIST_MEASUREMENT_PAGING', 'ph': 'getListMeasurementPaging'},
 
-                {'sc': 'GET_LIST_PORTFOLIO_CATEGORY', 'ph': 'getListPortfolioCategory'},
-                {'sc': 'ADD_PORTFOLIO_CATEGORY', 'ph': 'addPortfolioCategory'},
-                {'sc': 'UPDATE_PORTFOLIO_CATEGORY', 'ph': 'updatePortfolioCategory'},
-                {'sc': 'GET_LIST_PORTFOLIO_CATEGORY_PAGING', 'ph': 'getListPortfolioCategoryPaging'},
+                {'sc': 'GET_LIST_PORTOFOLIO', 'ph': 'getListPortofolio'},
+                {'sc': 'ADD_PORTOFOLIO', 'ph': 'addPortofolio'},
+                {'sc': 'UPDATE_PORTOFOLIO', 'ph': 'updatePortofolio'},
+                {'sc': 'GET_LIST_PORTOFOLIO_PAGING', 'ph': 'getListPortofolioPaging'},
 
                 {'sc': 'GET_LIST_USAGE_ORIENTATION', 'ph': 'getListUsageOrientation'},
                 {'sc': 'ADD_USAGE_ORIENTATION', 'ph': 'addUsageOrientation'},
@@ -311,6 +311,6 @@ router.post('/login', function (req, res) {
 });
 
 
-app.use('/api', router);
+app.use('/', router);
 app.listen(port);
 console.log('Magic happens on port ' + port);
