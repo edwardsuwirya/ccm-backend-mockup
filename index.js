@@ -180,10 +180,10 @@ router.post('/login', function (req, res) {
                 {'sc': 'UPDATE_CREDIT_CHARACTERISTIC', 'ph': 'updateCreditCharacteristic'},
                 {'sc': 'GET_LIST_CREDIT_CHARACTERISTIC_PAGING', 'ph': 'getListCreditCharacteristicPaging'},
 
-                {'sc': 'GET_LIST_CREDIT_RATING_AGENCY', 'ph': 'getListCreditRatingAgency'},
-                {'sc': 'ADD_CREDIT_RATING_AGENCY', 'ph': 'addCreditRatingAgency'},
-                {'sc': 'UPDATE_CREDIT_RATING_AGENCY', 'ph': 'updateCreditRatingAgency'},
-                {'sc': 'GET_LIST_CREDIT_RATING_AGENCY_PAGING', 'ph': 'getListCreditRatingAgencyPaging'},
+                {'sc': 'GET_LIST_CREDIT_RATING_AGENCY', 'ph': 'creditRating/getListCreditRatingAgency'},
+                {'sc': 'ADD_CREDIT_RATING_AGENCY', 'ph': 'creditRating/addCreditRatingAgency'},
+                {'sc': 'UPDATE_CREDIT_RATING_AGENCY', 'ph': 'creditRating/updateCreditRatingAgency'},
+                {'sc': 'GET_LIST_CREDIT_RATING_AGENCY_PAGING', 'ph': 'creditRating/getListCreditRatingAgencyPaging'},
 
                 {'sc': 'GET_LIST_CREDIT_TYPE', 'ph': 'getListCreditType'},
                 {'sc': 'ADD_CREDIT_TYPE', 'ph': 'addCreditType'},
